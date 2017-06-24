@@ -1,0 +1,15 @@
+mixin slider(items)
+  +b.DIV.slider
+    +b.DIV#slider_container
+      +b.UL.slides
+        each item in items
+          +b.LI.slides_product
+            +e.P.text= item.text
+            +e.DIV.title= item.title
+            +e.IMG.img(src="img/products/" + item.img + ".png")
+    +b.DIV.slider_nav
+      +b.DIV.slider_dots
+          each item in items
+            +e.DIV.item
+      +e.BUTTON#prevSlide
+      +e.BUTTON#nextSlide

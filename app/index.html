@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Gulp + Pug + SASS + BEM</title>
+    <title>test_proj</title>
     <meta charset="utf-8"/>
-    <meta content="Alexandr Ponomarenko" name="author"/>
-    <meta content="Gulp + Pug + SASS + BEM Boilerplate" name="description"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="HandheldFriendly" content="true"/>
     <meta name="format-detection" content="telephone=no"/>
@@ -22,14 +20,90 @@
     <link rel="stylesheet" href="css/main.css"/>
     <!-- endbuild-->
   </head>
-  <body>
-    <h1>INDEX CONTENT</h1>
+  <body class="page">
+    <div class="page__wrap">
+    </div>
+    <header class="header">
+      <div class="header__container"><a class="header__logo" href="#">LOGO</a>
+        <nav class="header-menu"><a class="header-menu__contacts" href="#">Контакты</a>
+          <div class="header-menu__btn">Товары
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="start">
+      <div class="start__container">
+        <div class="start__info">
+          <div class="start-text">
+            <h1 class="start-text__title">Заголовок 2 строки
+            </h1>
+            <p class="start-text__text">Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        </div><img class="start__img" src="img/phone.png" alt="" role="presentation"/>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__container">
+        <div class="about__info">
+          <div class="about-info">
+            <div class="title"><span class="title__text">Мы делаем lorem</span>
+            </div>
+            <p class="about-info__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <button class="about-info__btn">Товары
+            </button>
+          </div>
+        </div>
+        <div class="slider">
+          <div id="slider_container">
+            <ul class="slides">
+              <li class="slides_product">
+                <p class="slides_product__text">lorem ipsum
+                </p>
+                <div class="slides_product__title">Dacom Tws
+                </div><img class="slides_product__img" src="img/products/product1.png" alt="" role="presentation"/>
+              </li>
+              <li class="slides_product">
+                <p class="slides_product__text">dfrem idfd
+                </p>
+                <div class="slides_product__title">Ddfom Tfdfs
+                </div><img class="slides_product__img" src="img/products/product2.png" alt="" role="presentation"/>
+              </li>
+              <li class="slides_product">
+                <p class="slides_product__text">dewrwm idfd
+                </p>
+                <div class="slides_product__title">dewrwmom Tfdfs
+                </div><img class="slides_product__img" src="img/products/product3.png" alt="" role="presentation"/>
+              </li>
+            </ul>
+          </div>
+          <div class="slider_nav">
+            <div class="slider_dots">
+              <div class="slider_dots__item">
+              </div>
+              <div class="slider_dots__item">
+              </div>
+              <div class="slider_dots__item">
+              </div>
+            </div>
+            <button id="prevSlide">
+            </button>
+            <button id="nextSlide">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>footer</footer>
     <!-- build:js js/vendor.js-->
-    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- endbuild-->
     <!-- build:js js/main.js-->
     <script src="js/main.js"></script>
+    <!-- endbuild-->
+    <!-- build:js js/slider.js-->
+    <script src="js/slider.js"></script>
     <!-- endbuild-->
   </body>
 </html>

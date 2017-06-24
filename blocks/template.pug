@@ -2,6 +2,11 @@ include _assets/bemto/bemto
 - set_bemto_settings({ modifier: "--" })
 
 include head/head
+include header/header
+include start/start
+include title/title
+include about/about
+include slider/slider
 
 doctype html
 html(lang="ru")
@@ -9,23 +14,30 @@ html(lang="ru")
 	block head
 		head
 			+head({
-				"title": "s",
+				"title": "test_proj",
 
 			})
 			
-		body
+		+b.BODY.page
+			+e.DIV.wrap
+			
+			block header
+				+header()
+				
 			block content
-				div content
 
 			block footer
 				footer footer
 				
 			block vendors
 				// build:js js/vendor.js
-				script( src="libs/jquery/dist/jquery.min.js")
+				script( src="js/jquery.min.js")
 				// endbuild
 
 			block scripts
 				// build:js js/main.js
 				script( src="js/main.js")
+				// endbuild
+				// build:js js/slider.js
+				script( src="js/slider.js")
 				// endbuild

@@ -1,0 +1,17 @@
+.about
+  &__container
+    +container()
+  &__info
+    +col(6)
+  &-info
+    &__text
+      @extend %text
+      margin: 65px 0 125px 0
+    &__btn
+      @extend %btn
+      background-color: $main-color
+      color: $light-color
+      transform: translateX(55px)
+      letter-spacing: 0.7px
+      &::after
+        @extend %next

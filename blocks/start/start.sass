@@ -1,0 +1,53 @@
+.start
+  position: relative
+  z-index: 1
+  background-color: $main-color
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    opacity: .65
+    z-index: -1
+    width: 100%
+    height: 100%
+    background: url('../img/girl.png') no-repeat
+    background-position: left bottom
+    mix-blend-mode: soft-light
+  &__container
+    +container()
+    align-items: center
+    height: 970px
+  &__info
+    margin-top: -180px
+    +col(7)
+  &-text
+    &__title
+      font-size: 120px
+      text-transform: uppercase
+      color: $light-color
+      position: relative
+      font-weight: 900
+      line-height: 0.92
+      text-shadow: 10.8px 20.3px 10px rgba(0,0,0,0.13)
+      &::after
+        content: ""
+        position: absolute
+        left: 3%
+        bottom: -65px
+        height: 10px
+        width: 300px
+        background-color: $light-color
+    &__text
+      margin-top: 155px
+      font-size: 36px
+      position: absolute
+      transform: translateX(55px)
+      line-height: 3.06
+      font-weight: 500
+      &::after
+        @extend %next
+  &__img
+    z-index: 2
+    height: auto
+    +col(5)

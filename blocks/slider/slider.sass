@@ -1,0 +1,116 @@
+%nav
+  background: transparent
+  width: 50px
+  height: 50px
+  background: url('../img/next.png')
+  height: 16px
+  width: 19px
+  border: none
+  cursor: pointer
+
+#slider_container
+  position: relative
+  width: 460px
+  height: 620px
+  margin: 0 auto
+  box-sizing: border-box
+  overflow: hidden
+  border: 1px solid black
+
+.slider
+  position: absolute
+  right: 0
+  top: -55px
+  background-color: $light-color
+  z-index: 5
+  box-shadow: 0px 18px 46px 0 rgba(0,0,0,0.2)
+  &::before
+    content: ""
+    height: 660px
+    width: 270px
+    position: absolute
+    top: -20px
+    left: 50%
+    transform: translateX(-135px)
+    background-color: $dark-color
+    background: transparent
+    z-index: -1
+  &_nav
+    position: absolute
+    bottom: 0
+    left: -200px
+  &_dots
+    display: flex
+    align-items: center
+    margin-bottom: 27px
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      height: 3px
+      width: 300px
+      background: #000000
+      top: 23px
+      left: 0
+    &__item
+      height: 6px
+      width: 6px
+      margin-right: 15px
+      border-radius: 100%
+      background: #000000
+      cursor: pointer
+      &:last-child
+        margin-right: 0
+      &--active
+        height: 10px
+        width: 10px
+        border-radius: 100%
+        border: 3px solid red
+        box-sizing: border-box
+        margin-right: 15px
+        &:last-child
+          margin-right: 0
+
+#prevSlide
+  @extend %nav
+  background: url('../img/prev.png')
+  background-size: cover
+  margin-right: 8px
+#nextSlide
+  @extend %nav
+  background-size: cover
+
+.slides
+  position: relative
+  // padding: 55px 70px 0 70px
+  margin: 0
+  list-style: none
+  height: 100%
+  box-sizing: border-box
+  &_product
+    position: relative
+    float: left
+    height: 100%
+    text-transform: uppercase
+    &__text
+      margin: 55px 0 0 70px
+      font-size: 14px
+    &__title
+      font-size: 20px
+      font-weight: 900
+      margin: 20px 0 0 70px
+      position: relative
+      &::after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: -15px
+        width: 100px
+        height: 3px
+        background-color: $dark-color
+    &__img
+      width: 100%
+      height: 380px
+      position: absolute
+      bottom: 0
+      left: 0

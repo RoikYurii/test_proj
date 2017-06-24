@@ -56,7 +56,7 @@
 *******************************************************/
 (function($) {
 	"use strict";
-	
+
 	var methods = {
 
 		init : function(params) {
@@ -144,7 +144,7 @@
 *******************************************************/
 (function($) {
 	"use strict";
-	
+
 	var methods = {
 
 		init : function(params) {
@@ -416,7 +416,7 @@
 
 (function($) {
 	"use strict";
-	
+
 	var methods = {
 
 		init : function(params) {
@@ -595,7 +595,7 @@
 *******************************************************/
 (function($) {
 	"use strict";
-	
+
 	var methods = {
 
 		init : function(params) {
@@ -612,7 +612,7 @@
 			var prev = options.prev;
 
 			var slideWidth = slide.outerWidth(enableMargin);
-			
+
 			next.on("click", function () {
 				slider.find(wrapper).animate({ 'left': '-' + slideWidth + 'px' }, duration, function() {
 					slider.find(wrapper).find(curSlide).eq(0).clone().appendTo(slider.find(wrapper));
@@ -648,7 +648,7 @@
 *******************************************************/
 (function($) {
 	"use strict";
-	
+
 	var methods = {
 
 		init : function(params) {
@@ -686,7 +686,7 @@
 *******************************************************/
 (function($) {
 	"use strict";
-	
+
 	var methods = {
 
 		init : function(params) {
@@ -696,7 +696,7 @@
 
 			var $topmenu = $(".main-nav");
 			var $submenu = $(".main-nav__submenu");
-			
+
 			$(this).on("click", function() {
 				$topmenu.slideToggle(options.speed);
 				$(this).toggleClass("menu-btn--isActive");
